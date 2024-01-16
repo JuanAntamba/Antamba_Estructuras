@@ -43,6 +43,25 @@ int main() {
                     puts("No se pueden ingresar más alumnos.");
                 }
                 break;
+            case 2:  // for para poder ver alumnos ingresados
+                puts("\nDatos de los alumnos ingresados:\n");
+                for (int i = 0; i < n; i++) {
+                    printf("\nAlumno %d:\n", i + 1);
+                    printf("Matricula: %d\n", alumnos[i].matricula);
+                    printf("Nombre: %s\n", alumnos[i].nombre);
+                    printf("Direccion: %s\n", alumnos[i].direccion);
+                    printf("Carrera: %s\n", alumnos[i].carrera);
+                    printf("Promedio: %.2f\n", alumnos[i].promedio);
+                }
+                break;
+            case 3:  
+                puts("Saliendo del programa.");
+                break;
+            default:
+                puts("Opcion no valida.");
+                break;
         }
-    }
+    } while (opcion != 3);
+
+    return 0;
 }
